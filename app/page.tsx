@@ -4,9 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className=" h-screen  flex flex-col items-center justify-center gap-20  ">
-      <h1 className="text-center font-bold text-8xl text-amber-400 ">
-        ហេឡូកូនប៉ាៗ
-      </h1>
+      <h1 className="text-center font-bold text-8xl text-amber-400 ">ហេឡូ</h1>
       <Link href="/about-us">
         <button
           type="button"
