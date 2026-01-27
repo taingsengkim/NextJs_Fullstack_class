@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Kantumruy_Pro } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/nav";
+
+const getKantumruy = Kantumruy_Pro({
+  variable: "--font-kantumruy",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${getKantumruy.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-blue-900 `}
       >
-        {children}
+        <Navbar />
+        <div className="bg-blue-900  ">{children}</div>
       </body>
     </html>
   );
