@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Kantumruy_Pro } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/nav";
+import { Suspense } from "react";
+import ProductLoading from "./shop/loading";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const getKantumruy = Kantumruy_Pro({
   variable: "--font-kantumruy",
@@ -29,12 +32,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${getKantumruy.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-blue-900 `}
+        className={`${getKantumruy.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <div className="bg-blue-900  ">{children}</div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {" "}
+          <Navbar />
+          <div className=" bg-white dark:bg-gray-800 ">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );

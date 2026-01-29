@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import { ModeToggle } from "./toggle/mode-toggle";
 
 export default function Navbar() {
   return (
-    <div className="border absolute w-full  bg-white font-bold text-amber-500  p-4 rounded-lg dark:bg-gray-700 dark:text-gray-300">
+    <div className="border absolute w-full  bg-white font-bold text-amber-500  p-4  dark:bg-gray-900 dark:text-gray-300">
       <div className="w-full  px-10 mx-auto flex items-center justify-between gap-20">
         <h1>TSK.Dev</h1>
-        <ul className="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium ">
+        <ul className="flex-col items-center md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium ">
           <li>
             <Link
               href="/"
@@ -38,6 +39,9 @@ export default function Navbar() {
             >
               About Us
             </Link>
+          </li>
+          <li>
+            <ModeToggle />
           </li>
         </ul>
       </div>

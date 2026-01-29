@@ -8,7 +8,7 @@ export default function Home() {
       <Link href="/about-us">
         <button
           type="button"
-          className="focus:outline-black rounded-lg text-amber-400 font-bold text-sm py-2.5 px-4 border-b-4 border-blue-800 bg-blue-700 hover:cursor-pointer hover:scale-110 transition"
+          className="focus:outline-black rounded-lg text-amber-400 font-bold text-sm py-2.5 px-4 border-b-4 hover:cursor-pointer hover:scale-110 transition"
         >
           About Us
         </button>

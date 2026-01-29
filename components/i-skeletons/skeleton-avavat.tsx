@@ -1,0 +1,13 @@
+import { Skeleton } from "@/components/ui/skeleton";
+
+export function SkeletonAvatar() {
+  return (
+    <div className="flex  w-fit items-center gap-4">
+      <Skeleton className="size-10 shrink-0 rounded-full dark:bg-gray-600" />
+      <div className="grid gap-2">
+        <Skeleton className="h-4 w-[150px] dark:bg-gray-600" />
+        <Skeleton className="h-4 w-[100px] dark:bg-gray-600" />
+      </div>
+    </div>
+  );
+}
