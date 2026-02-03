@@ -13,7 +13,7 @@ async function getData() {
   return data;
 }
 
-export default async function page() {
+export default async function ShopPage() {
   const products: ProductResponse[] = await getData();
   return (
     <div className="pt-20 grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4   ">

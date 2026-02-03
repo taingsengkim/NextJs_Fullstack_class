@@ -1,5 +1,5 @@
 import Image from "next/image";
-import homelander from "../../public/homelander.jpg";
+import homelander from "../../../public/homelander.jpg";
 export default function AboutUsPage() {
   return (
     <div>

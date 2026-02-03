@@ -10,6 +10,7 @@ import { Badge } from "lucide-react";
 import { Price, PriceValue } from "./price";
 import { Khmer } from "next/font/google";
 import { ProductResponse } from "@/lib/type/product-response";
+import Image from "next/image";
 
 export default function ProductCard({
   title = "Product Slug",
@@ -25,9 +26,16 @@ export default function ProductCard({
     <Card className="h-full  overflow-hidden p-0">
       <CardHeader className="relative block p-0 ">
         <AspectRatio ratio={1.268115942} className="overflow-hidden">
-          <img
+          {/* <img
+            src={images[0]}
+            alt={title}                               
+            className="block size-full  object-cover object-center"
+          /> */}
+          <Image
             src={images[0]}
             alt={title}
+            width={500}
+            height={500}
             className="block size-full  object-cover object-center"
           />
         </AspectRatio>

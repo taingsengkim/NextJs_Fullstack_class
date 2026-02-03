@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Kantumruy_Pro } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/nav";
 import { Suspense } from "react";
-import ProductLoading from "./shop/loading";
+import ProductLoading from "./(i-tech)/shop/loading";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const getKantumruy = Kantumruy_Pro({
@@ -43,7 +43,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {" "}
-          <Navbar />
           <div className=" bg-white dark:bg-gray-800 ">{children}</div>
         </ThemeProvider>
       </body>
